@@ -1,0 +1,99 @@
+.udeCarousel
+{
+   background-image: url(../img/cover.jpg);
+   background-size: cover;
+   width: 100%;
+   height: 500px;
+   background-position: center center;
+   
+   .carousel__content
+   {
+        display: flex;
+        align-items: center;
+        height: 100%;
+        .carousel__text
+        {
+            max-width: 460px;
+            color: $color-white-0;
+            h3 {
+                @include styleText($fs-4, normal,$fw-bold-1);
+            }
+            p{
+                @include styleText($fs-0 + 3px, normal, normal);
+            }
+            .input-group
+            {
+                @extend .search;
+                .form-control
+                {
+                    padding: $pd-2+5px $pd-1+5px;
+                    @include styleText($fs-2, normal, 300);
+                    background-color: $color-white-0;
+                    border:none;
+                }
+                .input-group-append
+                {
+                    
+                    .input-group-text
+                    {
+                        background-color: $color-white-0;
+                        
+                        i.fa{
+                            font-size: $fs-2;
+                        }
+                        
+                    }
+                }
+            }
+           
+
+        }
+   }
+}
+
+
+
+
+
+@include responsive('small')
+{
+    .udeCarousel
+    {
+        height: 300px;
+        .carousel__content
+        {
+            .carousel__text
+            {
+                h3{
+                    @include styleText($fs-3,normal,$fw-normal);
+                }
+                p{
+                    @include styleText($fs-0+3px, normal, 400);
+                }
+                .input-group
+                {
+                    .form-control
+                    {
+                        font-size: $fs-0+1px;
+                    }
+                }
+                
+            }   
+        }
+        
+    }
+   
+    
+}
+
+@include responsive('medium')
+{
+    .carousel__content
+    {
+        .carousel__text
+        {
+            width: 80%;
+            
+        }
+    }
+}

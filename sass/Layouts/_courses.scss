@@ -1,0 +1,131 @@
+
+
+.courses
+{
+    margin-top: $mg-2;
+    .courses__content
+    {
+       width: 90%;
+       margin: 0 auto;
+        .courses__left
+        {
+            
+            background-color: $color-gray-5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0 $pd-2;
+            
+            .courses__text
+            {   
+                
+                h2{
+                    @include styleText($fs-2 - 1px, $color-black-0, $fw-bold-1);
+                }
+                p{
+                    @include styleText($fs-0 + 1px, $color-black-light, 400);
+                    line-height: 1.5em;
+                }
+            }
+            
+        }   
+    }
+}
+
+.courses__right
+{
+    
+    .nav
+    {
+        
+        
+        border-bottom: 1px solid #dedfe0;
+        justify-content: space-between;
+        white-space: nowrap;
+        .nav-item
+        {
+            white-space: nowrap;
+           
+            .nav-link
+            {
+                word-wrap: break-word;
+                color: $color-black-0;
+                padding: 0 $pd-1;
+                padding-bottom: $pd-1 + 6px;
+                border-radius: 0;
+                white-space: nowrap;
+                border-bottom: 6px solid $color-white-0;
+                &:hover{
+                    color: $color-blue;
+                }
+            }
+            .nav-link.active
+            {
+                background-color: white;
+                color:black;
+                border-bottom: 6px solid $color-blue;
+            }
+            
+        }
+    }
+}
+
+.tab-content
+{
+    margin-top: $mg-2;
+    position: relative;
+    
+    .tab-pane
+    {
+        padding: 0 $pd-1;
+        
+        .card
+        {
+            @extend .styleCard;
+        }
+    }
+}
+
+@include responsive('extra-large')
+{
+    .courses
+    {
+        .courses__content
+        {
+            width: 95%;
+            margin: 0 auto;
+        }
+    }
+}
+
+@include responsive('large')
+{
+    .courses
+    {
+        .courses__content
+        {
+            .courses__left
+            {
+                display: none;
+            }
+        }
+    }
+}
+
+@include responsive('medium')
+{
+    .courses
+    {
+        .courses__content
+        {
+            width: 100%;
+            .courses__right
+            {
+                .nav
+                {
+                    justify-content: left;
+                }
+            }
+        }
+    }
+}

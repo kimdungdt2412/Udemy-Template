@@ -1,0 +1,71 @@
+.company
+{
+    background-color: $color-gray-5;
+    padding-top: 50px;
+}
+
+.partner{
+    
+    h5{
+        @include styleText($fs-1,$color-gray-4, normal);
+        text-align: center;
+        margin-bottom: 0;
+    }
+    .partner__logo
+    {
+        padding-top: 32px;
+        text-align: center;
+        .partner__item{
+            display: inline-block;
+            margin: 0 32px;
+            margin-bottom: $mg-1;
+        }
+    }
+}
+
+.company__content
+{
+    padding-top: $pd-2;
+    padding-bottom: $pd-2;
+    padding: $pd-2 60px;
+    .company__detail
+    {
+        text-align: center;
+        margin-right: 0;
+        margin-left: 0;
+        .item1{
+            border-right: 1px solid $color-gray-6;
+        }
+        h4{
+            a{
+                @include styleText($fs-2 - 1px, $color-black-light, $fw-bold-1);
+                &:hover{
+                    text-decoration: none;
+                }
+            }
+        }
+        p{
+            @include styleText($fs-0 + 1px, normal, 400);
+            line-height: 1.5em;
+            padding-top: 3px;
+        }
+        button{
+            margin-top: $mg-1;
+            @extend .button;
+        }
+    }
+}
+
+@include responsive('medium')
+{
+    .company
+    {
+        .company__content
+        {
+            padding: $pd-2 $pd-1;
+            
+        }
+        
+    
+    }
+}

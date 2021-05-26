@@ -1,0 +1,8 @@
+.button{
+    @include styleButton($color-red-0, $color-red-0,$pd-1 + 1, $pd-1 + 2);
+    @include styleText($fs-0, $color-white-0, $fw-bold-1);
+    border-radius: $border-radius;
+    &:hover{
+        @include styleHoverBtn($color-red-2, $color-red-2,normal);
+    }
+}

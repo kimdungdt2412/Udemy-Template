@@ -1,0 +1,46 @@
+.search 
+        {
+            
+            .form-control
+            {
+                padding: $pd-2+3 $pd-2;
+                @include styleText($fs-1, $color-gray-4, $fw-normal);
+                border-color: $color-gray-5;
+                background-color: $color-gray-5;
+                &:focus{
+                    box-shadow: none;
+                    background: $color-white-0;
+                    border-right: none;
+                    border-color: $color-gray-6;
+
+
+                }
+                
+                
+            }
+            .input-group-append
+            {
+               
+                .input-group-text
+                {
+                    background-color: $color-gray-5;
+                    border: none;
+                    
+
+                    i.fa{
+                        color: $color-red-0;
+                        padding: 0 5px;
+                    }
+                    &:hover{
+                        background-color: $color-red-0;
+                        cursor: pointer;
+                        i.fa{
+                            color: $color-white-0;
+                            
+                        }
+                    }
+                    
+
+                }
+            }
+        }

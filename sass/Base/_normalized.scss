@@ -1,0 +1,71 @@
+.owl-prev, .owl-next{
+    position: absolute;
+    top: 33%;
+    left: -4%;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%!important; 
+    background-color: $color-white-0!important;
+    box-shadow: 0 2px 8px 2px rgba(20,23,28,.15);
+    z-index: 3;
+    span{
+        @include styleText($fs-4, $color-blue, $fw-normal);
+        line-height: 0.85;
+        text-align: center;
+    }
+    &:focus
+    {
+        outline: none;
+    }
+}
+
+.owl-next{
+    left:unset;
+    right: -4%;
+}
+
+.owl-theme 
+{
+    .owl-nav{
+        margin-top: 0;
+    }
+}
+
+.owl-dots{
+    .owl-dot{
+        &:focus
+        {
+            outline: none;
+        }
+    }   
+    
+}
+
+
+.owl-carousel
+{
+  .owl-next.disabled, .owl-prev.disabled
+  {
+    pointer-events: none;
+    opacity: 0;
+  }
+
+
+  //item equal height
+  .owl-stage {
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+
+        -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    }
+
+    .owl-item{
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        height: auto !important;
+    }
+}

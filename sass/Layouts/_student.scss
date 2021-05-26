@@ -1,0 +1,50 @@
+.student
+{
+    .student__content
+    {
+        width: 90%;
+        margin: $mg-2 auto;
+        h4{
+            @include styleText($fs-2 - 1px, $color-black-light, 400)
+        }
+        .student__list
+        {
+            padding-top: $pd-0;
+            .card{
+                @extend .styleCard;
+            }
+        }
+
+        .owl-carousel
+        {
+            .owl-next{
+                right: -2%;
+            }
+            .owl-prev{
+                left: -2%;
+            }
+        }
+    }
+}
+
+@include responsive('large')
+{
+    .student
+    {
+        .student__content
+        {
+            .owl-carousel
+            {
+                .owl-next
+                {
+                    right: -4%;
+                }
+                .owl-prev
+                {
+                    left: -4%;
+                }
+            }
+        }
+    }
+   
+}

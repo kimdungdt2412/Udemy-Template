@@ -1,0 +1,60 @@
+.services
+{
+    margin: $mg-2 0;
+    padding: $pd-2;
+    background-color: $color-white-cream;
+    .services__content
+    {
+        width: 93%;
+        margin: 0 auto;
+  
+        .service__item
+        {
+            
+            background-color: $color-white-0;
+            border: 1px solid #e8e9eb;
+            border-radius: 2px;
+            padding: $pd-2;
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            
+            
+            h3{
+                @include styleText($fs-2 - 1px, normal, $fw-bold-1);
+            }
+            p{
+                @include styleText($fs-0, $color-gray-4, 400);
+                padding-bottom: $pd-1;
+            }
+        }
+    }
+}
+
+
+
+@include responsive('large')
+{
+    .services
+    {
+        .owl-item
+        {
+            .service__item
+            {
+                
+                align-items: unset;
+                width: 100%;
+                img{
+                    display: block;
+                    
+                    max-height: 40px;
+                    
+                }
+                .service__text
+                {
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
